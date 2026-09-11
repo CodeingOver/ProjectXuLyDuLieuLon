@@ -8,7 +8,7 @@ Dự án **Xử Lý Dữ Liệu Lớn (Big Data Stream Processing)** tập trung
 - **Hệ thống 4 Notebook thực nghiệm chuyên biệt:**
   - `1_Set_Exact.ipynb`: Đếm chính xác $100\%$ bằng cấu trúc Python Set làm Ground Truth đối chứng.
   - `2_FM_Basic.ipynb`: Thuật toán Flajolet-Martin cơ bản (1 Hash) với hằng số $\phi \approx 0.77351$.
-  - `3_FM_Advanced.ipynb`: Thuật toán Flajolet-Martin cải tiến ($k=128$ Hash + Median-of-Means).
+  - `3_FM_Advanced.ipynb`: Thuật toán Flajolet-Martin cải tiến (Kỹ thuật PCSA 1-Hash Chia Bit & Median-of-Means).
   - `4_KetLuan_SoSanh.ipynb`: Báo cáo đối chuẩn hiệu năng toàn diện, vẽ 4 biểu đồ trực quan hóa và rút ra kết luận lý thuyết chuyên sâu.
 - **Giám sát tài nguyên chi tiết (Resource & Performance Benchmarking):** Đo lường và đối sánh dung lượng RAM chiếm dụng thực tế (`tracemalloc`, `sys.getsizeof`) giữa giải pháp chính xác (Python `set`) và cấu trúc Flajolet-Martin, cùng thời gian xử lý.
 - **Cơ chế lưu trữ trung gian linh hoạt (`results/`):** Tự động xuất và nạp các tệp `set_metrics.json`, `fm_basic_metrics.json`, `fm_advanced_metrics.json` để vẽ biểu đồ so sánh tức thì mà không cần chạy lại toàn bộ luồng log từ đầu.
@@ -56,7 +56,8 @@ Dự án hiện tại hoạt động độc lập và không bắt buộc phải
    ```
 3. **Thực thi theo quy trình 4 bước:**
    - **Bước 1:** Chạy `1_Set_Exact.ipynb` để thu thập dữ liệu đếm chính xác (Ground Truth).
-   - **Bước 2:** Chạy `2_FM_Basic.ipynb` để đo đạc thuật toán FM 1 hash.
-   - **Bước 3:** Chạy `3_FM_Advanced.ipynb` để đo đạc thuật toán FM 128 hash (Median of Means).
+   - **Bước 2:** Chạy `2_FM_Basic.ipynb` để đo đạc thuật toán FM 1 hash cơ bản.
+   - **Bước 3:** Chạy `3_FM_Advanced.ipynb` để đo đạc thuật toán FM PCSA (1 Hash Chia Bit & Median of Means).
+   - **Bước 4:** Chạy `4_KetLuan_SoSanh.ipynb` để tổng hợp kết quả, xuất bảng đối đầu và vẽ 4 biểu đồ phân tích.
    - **Bước 4:** Mở và chạy `4_KetLuan_SoSanh.ipynb` để tự động tổng hợp kết quả, kết xuất bảng so sánh, vẽ 4 đồ thị đối đầu và xem nhận xét kết luận chuyên sâu.
    *(Lưu ý: Bạn cũng có thể mở trực tiếp `4_KetLuan_SoSanh.ipynb` để xem ngay các biểu đồ và kết quả vì notebook đã được tích hợp sẵn bộ dữ liệu chuẩn 5.25 triệu dòng).*
