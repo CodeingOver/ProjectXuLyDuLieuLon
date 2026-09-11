@@ -4,6 +4,28 @@ Tất cả các thay đổi đáng chú ý của dự án **Xử Lý Dữ Liệu
 
 ---
 
+### [v1.3.1] - 2026-09-11
+
+- **[Cập nhật]**
+  - Chuyển đổi toàn diện $100\%$ cả 4 Notebook ([1_Set_Exact.ipynb](file:///d:/CodePython/XuLyDuLieuLon/1_Set_Exact.ipynb), [2_FM_Basic.ipynb](file:///d:/CodePython/XuLyDuLieuLon/2_FM_Basic.ipynb), [3_FM_Advanced.ipynb](file:///d:/CodePython/XuLyDuLieuLon/3_FM_Advanced.ipynb), [4_KetLuan_SoSanh.ipynb](file:///d:/CodePython/XuLyDuLieuLon/4_KetLuan_SoSanh.ipynb)) sang môi trường thuần Google Colab kết hợp lưu trữ Google Drive.
+  - Cố định đường dẫn tệp log tại `/content/drive/MyDrive/accessLog/access.log` và thư mục kết quả tại `/content/drive/MyDrive/accessLog/results/`.
+- **[Xóa bỏ]**
+  - Loại bỏ hoàn toàn mảng đường dẫn dự phòng `candidates` chứa các đường dẫn máy tính cá nhân (`accessLog/access.log`, `../accessLog/access.log`).
+  - Xóa bỏ khối xử lý ngoại lệ rẽ nhánh `try...except ImportError` về môi trường Local trong ô kết nối Google Drive, giúp mã nguồn đồng nhất, tường minh và chuẩn hóa cho nền tảng đám mây.
+
+---
+
+### [v1.3.0] - 2026-09-11
+
+- **[Thêm mới]**
+  - Cơ chế lưu trữ đám mây vĩnh viễn: Hàm `get_results_dir()` tự động nhận diện và lưu trữ trực tiếp toàn bộ kết quả thực nghiệm vào Google Drive (`/content/drive/MyDrive/accessLog/results/`) khi chạy trên Google Colab.
+- **[Cập nhật]**
+  - Nâng cấp [4_KetLuan_SoSanh.ipynb](file:///d:/CodePython/XuLyDuLieuLon/4_KetLuan_SoSanh.ipynb) để tự động nạp kết quả trực tiếp từ Google Drive, cho phép toàn bộ chu trình 4 Notebook chạy $100\%$ mượt mà trên nền tảng Cloud / Colab mà không cần bất kỳ thao tác thủ công nào.
+- **[Xóa bỏ]**
+  - Loại bỏ hoàn toàn cơ chế `files.download()` tải file về máy cá nhân rườm rà, giải quyết triệt để vấn đề phân tán file kết quả.
+
+---
+
 ### [v1.2.2] - 2026-09-11
 
 - **[Cập nhật]**

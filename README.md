@@ -45,19 +45,18 @@ Dự án hiện tại hoạt động độc lập và không bắt buộc phải
 
 | Tên biến / Tham số | Kiểu dữ liệu | Mặc định | Mô tả |
 | :--- | :--- | :--- | :--- |
-| `LOG_FILE` | Chuỗi (`str`) | `accessLog/access.log` | Đường dẫn tuyệt đối hoặc tương đối tới tệp tin access log cần xử lý |
+| `LOG_FILE` | Chuỗi (`str`) | `/content/drive/MyDrive/accessLog/access.log` | Đường dẫn tuyệt đối tới tệp tin access log lưu trữ trên Google Drive |
+| `RESULTS_DIR` | Chuỗi (`str`) | `/content/drive/MyDrive/accessLog/results` | Thư mục lưu trữ các tệp JSON kết quả đo đạc trên Google Drive |
 | `sample_step` | Số nguyên (`int`) | `50000` | Chu kỳ số dòng log được xử lý để ghi nhận thống kê và vẽ biểu đồ |
 
 ## 6. Hướng dẫn chạy & Sử dụng (Usage/Run Instructions)
-1. **Chuẩn bị dữ liệu:** Đặt tệp tin `access.log` vào thư mục `accessLog/` (hoặc mount Google Drive nếu chạy trên Google Colab).
-2. **Khởi chạy Jupyter Notebook:**
-   ```bash
-   jupyter notebook
-   ```
+1. **Chuẩn bị dữ liệu trên Google Drive:** Đặt tệp tin `access.log` vào thư mục `accessLog/` trên Google Drive cá nhân của bạn (đường dẫn: `/MyDrive/accessLog/access.log`).
+2. **Khởi chạy trên Google Colab:**
+   - Mở lần lượt các notebook trên Google Colab.
+   - Kết nối GPU / High-RAM runtime (nếu cần).
 3. **Thực thi theo quy trình 4 bước:**
-   - **Bước 1:** Chạy `1_Set_Exact.ipynb` để thu thập dữ liệu đếm chính xác (Ground Truth).
-   - **Bước 2:** Chạy `2_FM_Basic.ipynb` để đo đạc thuật toán FM 1 hash cơ bản.
-   - **Bước 3:** Chạy `3_FM_Advanced.ipynb` để đo đạc thuật toán FM PCSA (1 Hash Chia Bit & Median of Means).
-   - **Bước 4:** Chạy `4_KetLuan_SoSanh.ipynb` để tổng hợp kết quả, xuất bảng đối đầu và vẽ 4 biểu đồ phân tích.
-   - **Bước 4:** Mở và chạy `4_KetLuan_SoSanh.ipynb` để tự động tổng hợp kết quả, kết xuất bảng so sánh, vẽ 4 đồ thị đối đầu và xem nhận xét kết luận chuyên sâu.
-   *(Lưu ý: Bạn cũng có thể mở trực tiếp `4_KetLuan_SoSanh.ipynb` để xem ngay các biểu đồ và kết quả vì notebook đã được tích hợp sẵn bộ dữ liệu chuẩn 5.25 triệu dòng).*
+   - **Bước 1:** Chạy [1_Set_Exact.ipynb](file:///d:/CodePython/XuLyDuLieuLon/1_Set_Exact.ipynb) để thu thập dữ liệu đếm chính xác (Ground Truth).
+   - **Bước 2:** Chạy [2_FM_Basic.ipynb](file:///d:/CodePython/XuLyDuLieuLon/2_FM_Basic.ipynb) để đo đạc thuật toán FM 1 hash cơ bản.
+   - **Bước 3:** Chạy [3_FM_Advanced.ipynb](file:///d:/CodePython/XuLyDuLieuLon/3_FM_Advanced.ipynb) để đo đạc thuật toán FM PCSA (1 Hash Chia Bit & Median of Means).
+   - **Bước 4:** Chạy [4_KetLuan_SoSanh.ipynb](file:///d:/CodePython/XuLyDuLieuLon/4_KetLuan_SoSanh.ipynb) để tự động tổng hợp kết quả từ Google Drive, kết xuất bảng đối đầu và vẽ 4 biểu đồ phân tích.
+   *(Lưu ý: Hệ thống chạy thuần $100\%$ trên Google Colab kết hợp Google Drive. Mọi tệp kết quả JSON và biểu đồ được tự động lưu vĩnh viễn trên Drive của bạn).*
