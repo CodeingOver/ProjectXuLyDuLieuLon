@@ -35,12 +35,11 @@ XuLyDuLieuLon/
 │   ├── fm_basic_metrics.json       # Kết quả đo đạc từ Flajolet-Martin cơ bản (1 hash)
 │   └── fm_advanced_metrics.json    # Kết quả đo đạc từ Flajolet-Martin cải tiến (128 hash)
 │
-├── 1_Set_Exact.ipynb               # [MỚI] Thực nghiệm đếm chính xác bằng Set (Ground Truth)
-├── 2_FM_Basic.ipynb                # [MỚI] Thực nghiệm Flajolet-Martin cơ bản (1 Hash)
-├── 3_FM_Advanced.ipynb             # [MỚI] Thực nghiệm Flajolet-Martin cải tiến (128 Hash + Median-of-Means)
-├── 4_KetLuan_SoSanh.ipynb          # [MỚI] Tổng hợp đối sánh, 4 biểu đồ và kết luận chuyên sâu
-├── README.md                       # Tài liệu hướng dẫn cài đặt và sử dụng tổng quan
-└── XuLyDuLieuLon.ipynb             # Notebook gốc đối chiếu đầy đủ ban đầu
+├── 1_Set_Exact.ipynb               # Thực nghiệm đếm chính xác bằng Set (Ground Truth)
+├── 2_FM_Basic.ipynb                # Thực nghiệm Flajolet-Martin cơ bản (1 Hash)
+├── 3_FM_Advanced.ipynb             # Thực nghiệm Flajolet-Martin cải tiến (128 Hash + Median-of-Means)
+├── 4_KetLuan_SoSanh.ipynb          # Tổng hợp đối sánh, 4 biểu đồ và kết luận chuyên sâu
+└── README.md                       # Tài liệu hướng dẫn cài đặt và sử dụng tổng quan
 ```
 
 ## 4. Kiến trúc thành phần (Component Architecture)
