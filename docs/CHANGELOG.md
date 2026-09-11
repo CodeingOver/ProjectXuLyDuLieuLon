@@ -4,6 +4,24 @@ Tất cả các thay đổi đáng chú ý của dự án **Xử Lý Dữ Liệu
 
 ---
 
+### [v1.2.2] - 2026-09-11
+
+- **[Cập nhật]**
+  - Tái cấu trúc quy trình thực thi trong cả 3 Notebook ([1_Set_Exact.ipynb](file:///d:/CodePython/XuLyDuLieuLon/1_Set_Exact.ipynb), [2_FM_Basic.ipynb](file:///d:/CodePython/XuLyDuLieuLon/2_FM_Basic.ipynb), [3_FM_Advanced.ipynb](file:///d:/CodePython/XuLyDuLieuLon/3_FM_Advanced.ipynb)): Đưa ô tải file kết quả (`files.download()`) lên **TRƯỚC** ô trực quan hóa.
+  - Ô Trực quan hóa được nâng cấp để đọc trực tiếp $100\%$ dữ liệu từ tệp JSON trong `results/`, đảm bảo đồ thị hiển thị luôn là kết quả đối soát mới nhất vừa được ghi và tải về.
+
+---
+
+### [v1.2.1] - 2026-09-11
+
+- **[Thêm mới]**
+  - Tích hợp cơ chế tự động kích hoạt tải tệp kết quả (`google.colab.files.download`) vào cả 3 Notebook thực nghiệm ([1_Set_Exact.ipynb](file:///d:/CodePython/XuLyDuLieuLon/1_Set_Exact.ipynb), [2_FM_Basic.ipynb](file:///d:/CodePython/XuLyDuLieuLon/2_FM_Basic.ipynb), [3_FM_Advanced.ipynb](file:///d:/CodePython/XuLyDuLieuLon/3_FM_Advanced.ipynb)).
+- **[Cập nhật]**
+  - Bổ sung ô tải tệp chuyên biệt và lồng ghép lệnh download trực tiếp ngay sau khi ghi file `json.dump()`.
+  - Khắc phục triệt để vấn đề tệp kết quả bị cô lập trên ổ đĩa ảo `/content/` của máy chủ Google Colab trên mây, giúp người dùng dễ dàng đồng bộ tệp mới nhất về thư mục `results/` trên máy tính cục bộ.
+
+---
+
 ### [v1.2.0] - 2026-09-11
 
 - **[Thêm mới]**
