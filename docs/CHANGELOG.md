@@ -4,6 +4,14 @@ Tất cả các thay đổi đáng chú ý của dự án **Xử Lý Dữ Liệu
 
 ---
 
+### [v1.3.2] - 2026-09-11
+
+- **[Sửa lỗi]**
+  - Sửa lỗi cú pháp phân tích chuỗi (`Parse error: Expected FStringEnd, found string`) tại ô code số 4 dòng 32 trong [4_KetLuan_SoSanh.ipynb](file:///d:/CodePython/XuLyDuLieuLon/4_KetLuan_SoSanh.ipynb).
+  - Tách và tiền xử lý các chuỗi định dạng thời gian thực thi (`time_set_str`, `time_basic_str`, `time_adv_str`) ra ngoài biểu thức f-string, loại bỏ hoàn toàn các ký tự escape lồng nhau không hợp lệ trong Python.
+
+---
+
 ### [v1.3.1] - 2026-09-11
 
 - **[Cập nhật]**
