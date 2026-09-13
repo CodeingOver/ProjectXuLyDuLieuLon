@@ -4,6 +4,18 @@ Tất cả các thay đổi đáng chú ý của dự án **Xử Lý Dữ Liệu
 
 ---
 
+### [v1.4.1] - 2026-09-13
+
+- **[Cập nhật]**
+  - Đồng bộ toàn bộ các chỉ số thực nghiệm, số liệu phân tích và bảng đối soát trong [4_KetLuan_SoSanh.ipynb](file:///d:/CodePython/XuLyDuLieuLon/4_KetLuan_SoSanh.ipynb) khớp chính xác $100\%$ với kết quả chạy thực tế trên tập dữ liệu đầy đủ **10,365,152 dòng log** (> 10.36 triệu bản ghi):
+    - **Python Set (`1_Set_Exact.ipynb`):** 258,606 IP duy nhất (Ground Truth chuẩn), 134.72s, RAM cấu trúc chiếm 21.22 MB (22,247,602 Bytes), Peak RAM 21.346 MB.
+    - **Flajolet-Martin 1 Hash (`2_FM.ipynb`):** Số bit 0 tận cùng lớn nhất $R = 19$, ước lượng 677,803 IP, sai số tương đối 162.10%, độ chính xác 0.00%, thời gian 252.37s, RAM cấu trúc 76 Bytes (~0.07 KB, tiết kiệm 292,732 LẦN so với Set).
+    - **Flajolet-Martin PCSA (`3_FM_PCSA.ipynb`):** Ước lượng 421,262 IP, sai số tương đối 62.90%, độ chính xác 37.10%, thời gian 281.80s (tốc độ trung bình 36,781 dòng/s), RAM cấu trúc 4,712 Bytes (~4.60 KB, tiết kiệm 4,721 LẦN so với Set).
+  - Hoàn thiện biện luận lý thuyết chuyên sâu: Minh chứng hiện tượng phương sai cực cao và bước nhảy lũy thừa cơ số 2 của FM 1 Hash khi $R$ nhảy từ 18 lên 19 (từ ~338k vọt lên ~678k), và chứng minh vai trò của Stochastic Averaging kết hợp Median of Means trong PCSA giúp làm trơn đường cong, triệt tiêu ngoại lai và kiểm soát sai số ổn định trên quy mô Big Data.
+  - Cập nhật giá trị dự phòng mặc định (fallbacks) trong ô code phân tích số 4 của `4_KetLuan_SoSanh.ipynb` chuẩn theo số liệu bộ nhớ mới.
+
+---
+
 ### [v1.4.0] - 2026-09-13
 
 - **[Cập nhật]**
