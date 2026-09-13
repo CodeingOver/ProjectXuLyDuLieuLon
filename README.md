@@ -7,11 +7,11 @@ Dự án **Xử Lý Dữ Liệu Lớn (Big Data Stream Processing)** tập trung
 - **Đọc luồng dữ liệu (Data Streaming):** Đọc tuần tự từng dòng từ file log dung lượng lớn (3.5 GB+) bằng bộ tạo (generator), không nạp toàn bộ file vào RAM, tránh lỗi tràn bộ nhớ (Out of Memory).
 - **Hệ thống 4 Notebook thực nghiệm chuyên biệt:**
   - `1_Set_Exact.ipynb`: Đếm chính xác $100\%$ bằng cấu trúc Python Set làm Ground Truth đối chứng.
-  - `2_FM_Basic.ipynb`: Thuật toán Flajolet-Martin cơ bản (1 Hash) với hằng số $\phi \approx 0.77351$.
-  - `3_FM_Advanced.ipynb`: Thuật toán Flajolet-Martin cải tiến (Kỹ thuật PCSA 1-Hash Chia Bit & Median-of-Means).
+  - `2_FM.ipynb`: Thuật toán Flajolet-Martin (1 Hash) với hằng số hiệu chỉnh $\phi \approx 0.77351$.
+  - `3_FM_PCSA.ipynb`: Thuật toán Flajolet-Martin PCSA (Kỹ thuật 1 Hash Chia Bit - Stochastic Averaging & Median of Means).
   - `4_KetLuan_SoSanh.ipynb`: Báo cáo đối chuẩn hiệu năng toàn diện, vẽ 4 biểu đồ trực quan hóa và rút ra kết luận lý thuyết chuyên sâu.
 - **Giám sát tài nguyên chi tiết (Resource & Performance Benchmarking):** Đo lường và đối sánh dung lượng RAM chiếm dụng thực tế (`tracemalloc`, `sys.getsizeof`) giữa giải pháp chính xác (Python `set`) và cấu trúc Flajolet-Martin, cùng thời gian xử lý.
-- **Cơ chế lưu trữ trung gian linh hoạt (`results/`):** Tự động xuất và nạp các tệp `set_metrics.json`, `fm_basic_metrics.json`, `fm_advanced_metrics.json` để vẽ biểu đồ so sánh tức thì mà không cần chạy lại toàn bộ luồng log từ đầu.
+- **Cơ chế lưu trữ trung gian linh hoạt:** Tự động xuất và nạp các tệp `set_metrics.json`, `fm_metrics.json`, `fm_pcsa_metrics.json` trên Google Drive để vẽ biểu đồ so sánh tức thì mà không cần chạy lại toàn bộ luồng log từ đầu.
 
 ## 3. Yêu cầu hệ thống (Prerequisites)
 - **Hệ điều hành:** Windows, Linux, hoặc macOS.
@@ -56,7 +56,7 @@ Dự án hiện tại hoạt động độc lập và không bắt buộc phải
    - Kết nối GPU / High-RAM runtime (nếu cần).
 3. **Thực thi theo quy trình 4 bước:**
    - **Bước 1:** Chạy [1_Set_Exact.ipynb](file:///d:/CodePython/XuLyDuLieuLon/1_Set_Exact.ipynb) để thu thập dữ liệu đếm chính xác (Ground Truth).
-   - **Bước 2:** Chạy [2_FM_Basic.ipynb](file:///d:/CodePython/XuLyDuLieuLon/2_FM_Basic.ipynb) để đo đạc thuật toán FM 1 hash cơ bản.
-   - **Bước 3:** Chạy [3_FM_Advanced.ipynb](file:///d:/CodePython/XuLyDuLieuLon/3_FM_Advanced.ipynb) để đo đạc thuật toán FM PCSA (1 Hash Chia Bit & Median of Means).
+   - **Bước 2:** Chạy [2_FM.ipynb](file:///d:/CodePython/XuLyDuLieuLon/2_FM.ipynb) để đo đạc thuật toán Flajolet-Martin (1 hash).
+   - **Bước 3:** Chạy [3_FM_PCSA.ipynb](file:///d:/CodePython/XuLyDuLieuLon/3_FM_PCSA.ipynb) để đo đạc thuật toán Flajolet-Martin PCSA (1 Hash Chia Bit & Median of Means).
    - **Bước 4:** Chạy [4_KetLuan_SoSanh.ipynb](file:///d:/CodePython/XuLyDuLieuLon/4_KetLuan_SoSanh.ipynb) để tự động tổng hợp kết quả từ Google Drive, kết xuất bảng đối đầu và vẽ 4 biểu đồ phân tích.
    *(Lưu ý: Hệ thống chạy thuần $100\%$ trên Google Colab kết hợp Google Drive. Mọi tệp kết quả JSON và biểu đồ được tự động lưu vĩnh viễn trên Drive của bạn).*

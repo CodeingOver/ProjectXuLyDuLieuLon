@@ -4,6 +4,18 @@ Tất cả các thay đổi đáng chú ý của dự án **Xử Lý Dữ Liệu
 
 ---
 
+### [v1.4.0] - 2026-09-13
+
+- **[Cập nhật]**
+  - Đổi tên tệp `2_FM_Basic.ipynb` thành [2_FM.ipynb](file:///d:/CodePython/XuLyDuLieuLon/2_FM.ipynb) (loại bỏ chữ "Basic"), đồng thời chuẩn hóa tên lớp thuật toán thành `FlajoletMartin` và tệp kết quả đầu ra thành `fm_metrics.json`.
+  - Đổi tên tệp `3_FM_Advanced.ipynb` thành [3_FM_PCSA.ipynb](file:///d:/CodePython/XuLyDuLieuLon/3_FM_PCSA.ipynb) theo chuẩn tên khoa học chính thức của thuật toán gốc Philippe Flajolet & G. Nigel Martin (1985) - **PCSA (Probabilistic Counting with Stochastic Averaging)**, chuẩn hóa tên lớp `FlajoletMartinPCSA` và tệp kết quả `fm_pcsa_metrics.json`.
+  - Nâng cấp [4_KetLuan_SoSanh.ipynb](file:///d:/CodePython/XuLyDuLieuLon/4_KetLuan_SoSanh.ipynb) để tự động nhận diện và đọc đồng thời cả tệp kết quả theo tên chuẩn mới lẫn các tệp cũ nhằm duy trì tính tương thích ngược hoàn hảo.
+  - Đồng bộ toàn bộ sơ đồ Mermaid, cây thư mục và bảng mô tả trong tài liệu kiến trúc [architecture.md](file:///d:/CodePython/XuLyDuLieuLon/docs/architecture.md) và hướng dẫn sử dụng [README.md](file:///d:/CodePython/XuLyDuLieuLon/README.md).
+- **[Xóa bỏ]**
+  - Xóa bỏ hai tệp notebook cũ `2_FM_Basic.ipynb` và `3_FM_Advanced.ipynb` khỏi dự án.
+
+---
+
 ### [v1.3.2] - 2026-09-11
 
 - **[Sửa lỗi]**
