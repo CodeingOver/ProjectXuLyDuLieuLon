@@ -4,6 +4,14 @@ Tất cả các thay đổi đáng chú ý của dự án **Xử Lý Dữ Liệu
 
 ---
 
+### [v1.5.0] - 2026-09-13
+
+- **[Thêm mới]**
+  - Khởi tạo tài liệu Báo cáo môn học hoàn chỉnh [BAO_CAO_MON_HOC.md](file:///d:/CodePython/XuLyDuLieuLon/docs/BAO_CAO_MON_HOC.md) trong thư mục `docs/` bám sát $100\%$ quy cách trình bày và các mục bắt buộc từ tệp `Mẫu. BCMH.docx` của Giảng viên ThS. Trần Thị Nhi (Trường Đại học Thủ Dầu Một).
+  - Báo cáo tích hợp đầy đủ: Trang bìa chuẩn, Lời cam đoan, Mục lục, Danh mục Bảng/Hình/Sơ đồ, Phần 1 (Mục đích, Câu hỏi nghiên cứu, Thu thập dữ liệu log 10.36M bản ghi, Phân tích toán học $F_0$/FM/PCSA, Xây dựng và kiểm thử chi tiết), Phần 2 (Kết luận & Hướng phát triển), Phần 3 (Bảng tự chấm điểm thang 10 & Bảng phân công công việc) và Danh mục tài liệu tham khảo học thuật.
+
+---
+
 ### [v1.4.1] - 2026-09-13
 
 - **[Cập nhật]**

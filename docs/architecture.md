@@ -29,6 +29,7 @@ XuLyDuLieuLon/
 │
 ├── docs/                           # Tài liệu kỹ thuật dự án
 │   ├── architecture.md             # Kiến trúc hệ thống và phân tích luồng dữ liệu
+│   ├── BAO_CAO_MON_HOC.md          # Báo cáo môn học hoàn chỉnh (theo mẫu ThS. Trần Thị Nhi)
 │   └── CHANGELOG.md                # Lịch sử thay đổi và phiên bản hệ thống
 │
 ├── 1_Set_Exact.ipynb               # Thực nghiệm đếm chính xác bằng Set (Ground Truth)
