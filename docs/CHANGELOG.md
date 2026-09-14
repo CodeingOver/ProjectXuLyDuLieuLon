@@ -4,6 +4,35 @@ Tất cả các thay đổi đáng chú ý của dự án **Xử Lý Dữ Liệu
 
 ---
 
+### [v1.6.2] - 2026-09-14
+
+- **[Cập nhật]**
+  - Bổ sung **Mục 4.4: Giải mã công thức toán học chuẩn của FM PCSA: $\widehat{F_0} = 128 \times \frac{2^{\bar{R}}}{\phi}$** trong tài liệu [GIAI_THICH_FM_PCSA.md](file:///d:/CodePython/XuLyDuLieuLon/docs/GIAI_THICH_FM_PCSA.md):
+    - Làm rõ ý nghĩa chi tiết của từng thành phần: $\widehat{F_0}$ (ước lượng lực lượng), $m=128$ (số thùng phân vị), $\bar{R}$ (trung bình cộng số bit 0 tận cùng), $2^{\bar{R}}$ (lũy thừa biến đổi liên tục) và $\phi \approx 0.77351$ (hằng số hiệu chỉnh Flajolet-Martin).
+    - Giải thích bản chất vì sao phải nhân với 128: do mỗi thùng chỉ gánh trung bình $1/128$ tổng số IP, nên sau khi ước lượng cho 1 thùng bằng $\frac{2^{\bar{R}}}{\phi}$ thì bắt buộc phải nhân 128 để quy đổi ra toàn bộ dòng dữ liệu.
+    - Kết nối trực tiếp công thức lý thuyết với mô hình Median of Means (16 nhóm $\times$ 8 thùng) được cài đặt trong `3_FM_PCSA.ipynb`.
+
+---
+
+### [v1.6.1] - 2026-09-14
+
+- **[Cập nhật]**
+  - Mở rộng cẩm nang [GIAI_THICH_FM_PCSA.md](file:///d:/CodePython/XuLyDuLieuLon/docs/GIAI_THICH_FM_PCSA.md) với 2 chuyên mục thực chiến chuyên sâu:
+    - **Mục 5: So sánh bản chất FM 128 hàm băm (Multi-Hash) vs FM PCSA 128 thùng**: Giải thích hình tượng "128 người gác cổng khám xét 128 lần" gây nghẽn CPU (hơn 1.3 tỷ lần băm trên 10.36M log) so với "bốc thăm vào 1 trong 128 quầy để băm đúng 1 lần ($O(1)$)", và bản chất toán học vì sao PCSA phải nhân với $m=128$ trong công thức $\frac{m}{\phi} 2^{\bar{R}}$ còn Multi-hash thì không.
+    - **Mục 6: Giải đáp thắc mắc & hiểu lầm phổ biến (Q&A)**: Làm rõ sức chứa của không gian băm 64-bit ($\approx 23.8$ tỷ tỷ IP duy nhất), giải mã con số `sample_step = 50000` chỉ là chu kỳ in tiến độ màn hình (không ảnh hưởng kết quả cuối cùng) và phân tích cơ chế vận hành tách biệt giữa pha Cập nhật luồng (`update`) và pha Ước lượng tức thì (`estimate`).
+
+---
+
+### [v1.6.0] - 2026-09-14
+
+- **[Thêm mới]**
+  - Khởi tạo tài liệu cẩm nang giải thích trực quan [GIAI_THICH_FM_PCSA.md](file:///d:/CodePython/XuLyDuLieuLon/docs/GIAI_THICH_FM_PCSA.md) trong thư mục `docs/`.
+  - Tài liệu sử dụng các hình tượng gần gũi (trò chơi tung đồng xu sấp ngửa, chia nhóm hội trường) kết hợp ví dụ minh họa step-by-step từng bước (IP -> băm nhị phân -> tách 2 bit chọn thùng -> đếm bit 0 -> cập nhật mảng thùng).
+  - Phân tích bản chất toán học: giải thích trực quan hiện tượng nhảy vọt gấp đôi của FM 1 Hash ($R=18 \to 19$), cơ chế làm trơn số thực của Stochastic Averaging và cơ chế triệt tiêu ngoại lai của Median of Means (16 nhóm x 8 thùng).
+  - Đóng gói 3 luận điểm cốt lõi giúp sinh viên tự tin trả lời vấn đáp / bảo vệ đồ án với Giảng viên ThS. Trần Thị Nhi.
+
+---
+
 ### [v1.5.0] - 2026-09-13
 
 - **[Thêm mới]**
