@@ -30,6 +30,7 @@ XuLyDuLieuLon/
 ├── docs/                           # Tài liệu kỹ thuật dự án
 │   ├── architecture.md             # Kiến trúc hệ thống và phân tích luồng dữ liệu
 │   ├── BAO_CAO_MON_HOC.md          # Báo cáo môn học hoàn chỉnh (theo mẫu ThS. Trần Thị Nhi)
+│   ├── BaoCao.md                   # Kịch bản thuyết trình và cẩm nang vấn đáp báo cáo môn học
 │   ├── GIAI_THICH_FM_PCSA.md       # Cẩm nang giải thích trực quan thuật toán FM PCSA
 │   └── CHANGELOG.md                # Lịch sử thay đổi và phiên bản hệ thống
 │

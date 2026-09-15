@@ -4,6 +4,21 @@ Tất cả các thay đổi đáng chú ý của dự án **Xử Lý Dữ Liệu
 
 ---
 
+### [v1.7.0] - 2026-09-16
+
+- **[Thêm mới]**
+  - Khởi tạo tài liệu [BaoCao.md](file:///d:/CodePython/XuLyDuLieuLon/docs/BaoCao.md) - **Kịch bản thuyết trình & Cẩm nang vấn đáp báo cáo môn học** hoàn chỉnh:
+    - Bảng phân bổ timeline chi tiết cho buổi báo cáo 10 - 12 phút (+ 5-10 phút vấn đáp phản biện).
+    - Kịch bản lời thoại mẫu chi tiết từng slide:
+      - **Phần 1: Mở đầu & Bối cảnh Data Streaming**: 3 đặc tính kỹ thuật khắt khe (Unbounded, Single-pass, Resource-constrained) và lý do các giải pháp bảng băm truyền thống bị sập RAM.
+      - **Phần 2: Phương pháp đếm chính xác (Python Set)**: Cơ chế hash table, số liệu Ground Truth 258,606 IP, bộ nhớ 21.22 MB và nhược điểm $O(n)$.
+      - **Phần 3: Thuật toán Flajolet-Martin (FM 1 Hash)**: Ẩn dụ trò chơi tung đồng xu, cơ chế đếm bit 0 tận cùng $R$, kỷ lục $R=19$, sai số 162.10%, bộ nhớ 76 Bytes (tiết kiệm 292,732 lần) và 2 nhược điểm cốt tử (bước nhảy $+100\%$ và rủi ro nhiễu ngoại lai).
+      - **Phần 4: Thuật toán nâng cấp Flajolet-Martin PCSA**: Phân tích hạn chế của Multi-Hash (1.32 tỷ lần băm gây nghẽn CPU), cơ chế Stochastic Averaging băm 1 lần ($O(1)$) chia 128 thùng, giải mã công thức $\widehat{F_0} = 128 \times \frac{2^{\bar{R}}}{\phi}$, kỹ thuật Median of Means (16 nhóm $\times$ 8 thùng) triệt tiêu ngoại lai, kết quả ước lượng 421,262 IP, sai số 62.90%, bộ nhớ 4.6 KB và tốc độ 36,781 dòng/s.
+      - **Phần 5: Bảng đối soát 3 chiều & Đúc kết đề tài**: Phân tích bài toán đánh đổi (Trade-off) trong Big Data.
+      - **Phần 6: Bộ 7 câu hỏi & câu trả lời vấn đáp (Q&A) thực chiến** với Giảng viên ThS. Trần Thị Nhi (giải thích nguồn gốc hằng số $\phi$, lý do nhân 128, cấu hình 128 thùng/16 nhóm, sức chứa 64-bit 23.8 tỷ tỷ IP, bước nhảy 50k log chỉ là nhịp in màn hình, và cơ chế streaming trực tuyến $O(1)$).
+
+---
+
 ### [v1.6.2] - 2026-09-14
 
 - **[Cập nhật]**
