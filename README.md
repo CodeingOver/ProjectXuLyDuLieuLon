@@ -1,4 +1,4 @@
-# Hướng dẫn chạy & Sử dụng (Usage/Run Instructions)
+# Hướng dẫn chạy & Sử dụng
 
 1. **Chuẩn bị dữ liệu trên Google Drive:** Đặt tệp tin `access.log` vào thư mục `accessLog/` trên Google Drive cá nhân của bạn (đường dẫn: `/MyDrive/accessLog/access.log`).
 2. **Khởi chạy trên Google Colab:**
