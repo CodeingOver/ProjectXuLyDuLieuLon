@@ -9,4 +9,4 @@
    - **Bước 2:** Chạy [2_FM.ipynb](file:///d:/CodePython/XuLyDuLieuLon/2_FM.ipynb) để đo đạc thuật toán Flajolet-Martin (1 hash).
    - **Bước 3:** Chạy [3_FM_PCSA.ipynb](file:///d:/CodePython/XuLyDuLieuLon/3_FM_PCSA.ipynb) để đo đạc thuật toán Flajolet-Martin PCSA (1 Hash Chia Bit & Median of Means).
    - **Bước 4:** Chạy [4_KetLuan_SoSanh.ipynb](file:///d:/CodePython/XuLyDuLieuLon/4_KetLuan_SoSanh.ipynb) để tự động tổng hợp kết quả từ Google Drive, kết xuất bảng đối đầu và vẽ 4 biểu đồ phân tích.
-     *(Lưu ý: Hệ thống chạy thuần $100\%$ trên Google Colab kết hợp Google Drive. Mọi tệp kết quả JSON và biểu đồ được tự động lưu vĩnh viễn trên Drive của bạn).*
+
